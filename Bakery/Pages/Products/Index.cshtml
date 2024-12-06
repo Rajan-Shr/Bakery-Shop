@@ -1,0 +1,54 @@
+﻿@page
+@model Bakery.Pages.Products.IndexModel
+
+@{
+    ViewData["Title"] = "Our Products";
+}
+
+<section id="products" class="py-5" style="background-color: #fff5e4;">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h1 class="display-5 fw-bold" style="color: #8b4513;">Our Freshly Baked Goods</h1>
+            <p class="fs-4" style="color: #6f4e37;">Explore our delicious range of baked treats, made with love and all-natural ingredients.</p>
+        </div>
+        <div class="text-end mb-3">
+            <a asp-page="Create" class="btn btn-primary" style="background-color: #8b4513; border-color: #8b4513;">Add New Product</a>
+        </div>
+        <table class="table table-striped table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Product[0].Name)</th>
+                    <th>@Html.DisplayNameFor(model => model.Product[0].Description)</th>
+                    <th>@Html.DisplayNameFor(model => model.Product[0].Price)</th>
+                    <th>@Html.DisplayNameFor(model => model.Product[0].ImageName)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Product)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.ImageName))
+                            {
+                                <img src="~/images/products/@item.ImageName" alt="@item.Name" class="img-thumbnail" style="max-width: 100px;">
+                            }
+                            else
+                            {
+                                <span class="text-muted">No Image</span>
+                            }
+                        </td>
+                        <td>
+                            <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary">Edit</a>
+                            <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">Details</a>
+                            <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>

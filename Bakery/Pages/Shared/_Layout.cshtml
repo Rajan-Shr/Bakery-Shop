@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head class="h-100">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Bakery</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Bakery.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfaf6;
+        }
+
+        .navbar {
+            background-color: #ffecd1;
+        }
+
+        .navbar-brand {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            color: #a0522d !important;
+        }
+
+        .nav-link {
+            color: #8b4513 !important;
+        }
+
+            .nav-link:hover {
+                color: #d2691e !important;
+            }
+
+        header {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #ffecd1;
+            color: #8b4513;
+            font-size: 0.9rem;
+        }
+
+            footer a {
+                color: #8b4513;
+                text-decoration: none;
+            }
+
+                footer a:hover {
+                    text-decoration: underline;
+                }
+
+        .hero {
+            background: linear-gradient(rgba(255, 236, 209, 0.8), rgba(255, 236, 209, 0.8)), url('~/images/bakery-background.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: #8b4513;
+        }
+
+            .hero h1 {
+                font-family: 'Great Vibes', cursive;
+                font-size: 3.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero p {
+                font-size: 1.25rem;
+                font-weight: 400;
+            }
+
+        .btn-primary {
+            background-color: #d2691e;
+            border: none;
+        }
+
+            .btn-primary:hover {
+                background-color: #a0522d;
+            }
+    </style>
+</head>
+<body class="h-100 d-flex flex-column m-0">
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" asp-page="/Index">
+                    The Bakery Bliss
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/Menu">Menu</a>
+                        </li>
+                        @await Component.InvokeAsync(nameof(Model.Basket))
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Welcome to Bakery Bliss</h1>
+            <p>Where every bite brings a little happiness!</p>
+            <a asp-page="/Menu" class="btn btn-primary mt-3">Explore Our Menu</a>
+        </div>
+    </div>
+
+    <div class="container flex-grow-1 py-4">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer py-3">
+        <div class="container text-center">
+            &copy; 2024 - <a href="#">Bakery Bliss</a>. Crafted with love.
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

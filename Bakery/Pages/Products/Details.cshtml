@@ -1,0 +1,46 @@
+﻿@page
+@model Bakery.Pages.Products.DetailsModel
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<div class="container py-5">
+    <h1 class="mb-4">Product Details</h1>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h4 class="card-title">Product Information</h4>
+            <hr />
+            <div class="d-flex ">
+                <dl class="row gap-1">
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Product.Name)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.Product.Name)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Product.Description)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.Product.Description)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Product.Price)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.Product.Price)
+                    </dd>
+
+                </dl>
+                <img width="500" src="/images/products/@Model.Product.ImageName" />
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@Model.Product.Id">Edit</a>
+        <a class="btn btn-outline-secondary" asp-page="./Index">Back to List</a>
+    </div>
+</div>

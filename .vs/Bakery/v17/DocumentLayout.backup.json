@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\.net\\Project\\Bakery\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A0ADE850-E6CC-478B-ADB4-99270BD219F7}|Bakery\\Bakery.csproj|d:\\.net\\project\\bakery\\bakery\\pages\\cart.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0ADE850-E6CC-478B-ADB4-99270BD219F7}|Bakery\\Bakery.csproj|solutionrelative:bakery\\pages\\cart.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0ADE850-E6CC-478B-ADB4-99270BD219F7}|Bakery\\Bakery.csproj|d:\\.net\\project\\bakery\\bakery\\pages\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A0ADE850-E6CC-478B-ADB4-99270BD219F7}|Bakery\\Bakery.csproj|solutionrelative:bakery\\pages\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cart.cshtml.cs",
+              "DocumentMoniker": "D:\\.net\\Project\\Bakery\\Bakery\\Pages\\Cart.cshtml.cs",
+              "RelativeDocumentMoniker": "Bakery\\Pages\\Cart.cshtml.cs",
+              "ToolTip": "D:\\.net\\Project\\Bakery\\Bakery\\Pages\\Cart.cshtml.cs",
+              "RelativeToolTip": "Bakery\\Pages\\Cart.cshtml.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwCQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T08:30:14.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cart.cshtml",
+              "DocumentMoniker": "D:\\.net\\Project\\Bakery\\Bakery\\Pages\\Cart.cshtml",
+              "RelativeDocumentMoniker": "Bakery\\Pages\\Cart.cshtml",
+              "ToolTip": "D:\\.net\\Project\\Bakery\\Bakery\\Pages\\Cart.cshtml",
+              "RelativeToolTip": "Bakery\\Pages\\Cart.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T08:24:40.923Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

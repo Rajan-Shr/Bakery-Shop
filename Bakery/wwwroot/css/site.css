@@ -1,0 +1,201 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem black;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.navbar-nav {
+    justify-content: flex-end;
+}
+
+.navbar-brand {
+    font-family: Limelight, sans-serif;
+    font-size: 2.5rem;
+}
+
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+}
+
+/* Progress Bar */
+.progress {
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    height: 2.5rem;
+    margin: 1rem auto;
+    max-width: 800px;
+}
+
+.progress-bar {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2.5rem; /* Matches the height of the bar */
+    transition: width 0.3s ease;
+}
+
+/* Product Description Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+    gap: 2rem;
+}
+
+.col-3 {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+    .col-3 h3 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 2rem;
+        text-align:left;
+    }
+
+    .col-3 img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .col-3 p {
+        font-size: 1.2rem;
+        color: #555;
+        margin-top: 1rem;
+        line-height: 1.8;
+    }
+
+.product-price {
+    font-size: 1.5rem;
+    color: #007bff;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .col-3 {
+        max-width: 100%;
+    }
+
+    .progress {
+        max-width: 90%;
+    }
+
+    .progress-bar {
+        font-size: 1rem;
+    }
+}
+
+
+/* General styles for the About Us section */
+#main {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+#main h1{
+    margin-bottom:40px;
+}
+
+#main p:first-of-type {
+    font-style: italic;
+    color: #6D4F28; /* A slightly darker shade for variety */
+}
+
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+    #main {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+.input-validation-error,
+.input-validation-error:focus {
+    background: #f1aeb5;
+    color: #dc3545;
+}
+
+    .input-validation-error:focus {
+        border-color: #dc3545;
+        box-shadow: 0 0 0 0.2rem #f1aeb5;
+    }
+
+.field-validation-error,
+.validation-summary-errors {
+    color: #dc3545;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 767px) {
+    .product-card {
+        width: 100%;
+    }
+}
